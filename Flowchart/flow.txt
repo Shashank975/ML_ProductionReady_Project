@@ -1,0 +1,49 @@
+This chart provides a visual overview of the workflow for a machine learning project related to a US Visa dataset. The chart is divided into three main sections: ML Framing, Development Environment, and Deployable Code.
+
+1. ML Framing (Left Section)
+This section outlines the initial steps of the machine learning process:
+
+Dataset: The workflow starts with the input of a CSV dataset named Visadataset.csv, which is obtained from Kaggle (a link is provided).
+
+Data Input: The dataset is loaded into a Jupyter notebook for further processing.
+
+Exploratory Data Analysis (EDA): The data undergoes EDA to understand its structure and underlying patterns.
+
+Data Cleaning: The dataset is cleaned to remove any inconsistencies or irrelevant information.
+
+MongoDB Integration: After EDA, the dataset is inserted into a MongoDB database using a notebook named mangoDB_demo.ipynb.
+
+Model Training: Two Jupyter notebooks, 1_EDA_US_visa.ipynb and 2_Feature_Engineering_and_Model_Training.ipynb, are used to apply machine learning algorithms, fit models, and find the best one with the maximum accuracy.
+
+2. Development Environment (Middle Section)
+This section describes the development setup and essential files:
+
+Version Control: The setup includes integration with GitHub for version control, using VS Code as the development environment.
+
+File Structure:
+
+template.py: Generates the entire folder structure for the project, with each folder containing an __init__.py file.
+Docker and GitHub Files: .dockerignore, .gitignore, Dockerfile, and README.md files are included for setting up Docker containers and managing the project on GitHub.
+Core Files: app.py, demo.py, setup.py, utils folder, model.yaml, and schema.yaml are crucial files for the application's logic, configuration, and schema definition.
+Dependencies: The requirements.txt file lists all the Python libraries required for the project.
+
+Useful Commands:
+
+Create a new Conda environment with conda create -n visa python=3.8 -y
+Activate the environment with conda activate visa
+Install dependencies with pip install -r requirements.txt
+3. Deployable Code (Right Section)
+This section outlines the final structure of the deployable code:
+
+Project Structure:
+components: Contains Python scripts for various stages of the ML pipeline, such as data_ingestion.py, data_validation.py, data_transformation.py, model_trainer.py, model_evaluation.py, and model_pusher.py.
+configuration: Manages project configuration settings.
+constant: Stores constant values used across the project.
+entity: Contains the scripts config_entity.py and artifact_entity.py, which define data entities used in the project.
+logger: Handles logging to track events during execution.
+pipeline: Contains the scripts training_pipeline.py and prediction_pipeline.py, which define the ML training and prediction workflows.
+utils: Includes utility scripts like main_utils.py that assist in various tasks.
+Legends
+Pink boxes represent folders.
+Blue boxes represent files.
+This chart provides a comprehensive overview of the project structure and development workflow, from data preparation to deploying a fully functional machine learning model.
